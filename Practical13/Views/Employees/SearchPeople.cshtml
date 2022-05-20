@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Practical13.Models.Employee>
+
+@{
+    ViewBag.Title = "SearchPeople";
+}
+
+
+
+<tr style="height:30px">
+    <td>Id</td>
+    <td>Name</td>
+    <td>DOB</td>
+    <td>Age</td>
+</tr>
+
+@foreach (var p in Model)
+{
+    <tr style="height:30px">
+        <td>@p.Id</td>
+        <td>@p.Name</td>
+        <td>@p.DOB</td>
+        <td>@p.Age</td>
+    </tr>
+}
+
+

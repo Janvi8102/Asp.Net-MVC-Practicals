@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+   
+
+       <label id="lb"></label> <br />
+
+            <button id="print" value="Print Text">Print Text </button>
+            <button id="bold" value="Bold">Bold</button>
+            <button id="italic" value="Italic">Italic</button>
+            <button id="underline" value="Underline">Underline</button>
+            <button id="reset" value="Reset" type="reset">Reset</button>
+ 
+
+
+        <script>
+            var label = document.getElementById('lb');
+            var Print = document.getElementById('print');
+            var Bold = document.getElementById('bold');
+            var Italic = document.getElementById('italic');
+            var Underline = document.getElementById('underline');
+            var Reset = document.getElementById('reset');
+
+            Print.addEventListener('click', function () {
+                label.innerHTML = "Hello World"
+            });
+
+            Bold.addEventListener('click', function () {
+                label.innerHTML = "Hello World"
+                label.style.fontWeight = 'bold';
+                label.style.fontStyle = 'none';
+                label.style.textDecoration = 'none';
+            });
+
+            Italic.addEventListener('click', function () {
+                label.innerHTML = "Hello World"
+                label.style.fontStyle = 'italic';
+                label.style.fontWeight = 'none';
+                label.style.textDecoration = 'none';
+            });
+
+            Underline.addEventListener('click', function () {
+                label.innerHTML = "Hello World";
+                label.style.textDecoration = 'underline';
+                label.style.fontWeight = 'none';
+                label.style.fontStyle = 'none';
+            });
+
+            Reset.addEventListener('click', function () {
+                label.innerHTML = "";
+                label.style.textDecoration = '';
+                label.style.fontStyle = '';
+                label.style.fontWeight = '';
+            });
+        </script>
+
+</body>
+</html>

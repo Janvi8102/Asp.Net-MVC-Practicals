@@ -1,0 +1,14 @@
+﻿@model Practical10_test2.Models.Student
+
+<h2>Details</h2>
+@Html.Partial("_PartialDetails")
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+       @Html.ActionLink("Edit","Edit", new {id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
